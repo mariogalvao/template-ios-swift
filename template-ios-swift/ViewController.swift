@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelNumber: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let randomNumber = Int.random(in: 0..<1000)
+        let randomNumberString = String(randomNumber)
+        labelNumber.text = randomNumberString
+    }
+    
 }
 
